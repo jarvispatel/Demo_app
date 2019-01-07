@@ -31,6 +31,7 @@ public class Swap extends AppCompatActivity {
 
         databaseHelper.getReadableDatabase().execSQL("delete from " + Quote_list.TABLE_NAME);
 
+
         for (int i = 0; i < 5; i++) {
             insert_note("Morning", "The Gävle Goat is a giant version of a traditional Swedish Yule Goat figure made of straw. It has become notable for being a recurring target for vandalism by arson, and has been destroyed several times since the first goat was erected in 1966. ");
         }

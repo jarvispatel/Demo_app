@@ -12,8 +12,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.MainActivity"></activity>
-        <activity android:name=".Activity.Swap">
+        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.Swap" />
+
+        <service android:name=".Helper.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <activity
+            android:name=".Activity.Firebase_database"
+            android:label="Real Time Database" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7956633960710318~5233590166" />
+
+        <activity android:name=".Activity.Collapsing_toolbar">
+
+        </activity>
+        <activity android:name=".Activity.Open_image_on_webviewclick">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
